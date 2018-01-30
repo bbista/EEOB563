@@ -1,1 +1,1 @@
-My brand new Git repository
+My brand new Git repository.
