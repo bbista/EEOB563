@@ -1,0 +1,50 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Tue Jan 30 10:19:47 2018]
+[!
+>Data file = cob_aa.nxs
+>Heuristic search settings:
+>  Optimality criterion = parsimony
+>    Character-status summary:
+>      Of 382 total characters:
+>        All characters are of type 'unord'
+>        All characters have equal weight
+>        212 characters are constant
+>        70 variable characters are parsimony-uninformative
+>        Number of parsimony-informative characters = 100
+>    Gaps are treated as "missing"
+>  Starting tree(s) obtained via stepwise addition
+>    Addition sequence: random
+>    Number of replicates = 100
+>    Starting seed = generated automatically
+>    Number of trees held at each step = 1
+>  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+>    Steepest descent option not in effect
+>  Initial 'Maxtrees' setting = 100
+>  Branches collapsed (creating polytomies) if maximum branch length is zero
+>  'MulTrees' option in effect
+>  No topological constraints in effect
+>  Trees are unrooted
+>
+>Heuristic search completed
+>  Total number of rearrangements tried = 163393
+>  Score of best tree(s) found = 506
+>  Number of trees retained = 1
+>  Time used = 0.09 sec (CPU time = 0.09 sec)
+]
+	Translate
+		1 Elephant,
+		2 Aardvark,
+		3 Tenrec,
+		4 Sloth,
+		5 Armadillo,
+		6 Human,
+		7 Tree_shrew,
+		8 Rabbit,
+		9 Mouse,
+		10 Hedgehog,
+		11 Flying_fox,
+		12 Whale
+		;
+tree 'PAUP_1' = [&U] (1:32,(((2:19,(((3:35,5:21):13,(9:24,10:49):12):11,((7:39,8:24):9,(11:22,12:33):9):8):13):20,6:32):15,4:46):20);
+End;
