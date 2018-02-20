@@ -1,0 +1,71 @@
+
+
+This is RAxML version 8.2.9 released by Alexandros Stamatakis on July 20 2016.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 40 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 0.00%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+ML estimate of 25 per site rate categories
+
+Likelihood of final tree will be evaluated and optimized under GAMMA
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 40
+Name: No Name Provided
+DataType: AA
+Substitution Matrix: JTT
+Using empirical base frequencies
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS-SSE3 -T2 -m PROTCATJTTF -p 12345 -s protein.phy -n T9 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.072 0.001 0.006 0.040 0.004 0.038 0.044 0.020 0.062 0.090 0.194 0.022 0.088 0.058 0.036 0.064 0.080 0.001 0.030 0.052 
+
+Inference[0]: Time 1.038964 CAT-based likelihood -363.564121, best rearrangement setting 5
+alpha[0]: 1.000000 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -407.554603 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/Hands-On/RAxML_result.T9
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -407.554603 .... 
+
+Final GAMMA-based Score of best tree -407.554603
+
+Program execution info written to /home/bbista/eeob563/eeob563-labs/lab4/Hands-On/RAxML_info.T9
+Best-scoring ML tree written to: /home/bbista/eeob563/eeob563-labs/lab4/Hands-On/RAxML_bestTree.T9
+
+Overall execution time: 1.309713 secs or 0.000364 hours or 0.000015 days
+

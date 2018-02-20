@@ -1,0 +1,133 @@
+
+
+Using BFGS method to optimize GTR rate parameters, to disable this specify "--no-bfgs" 
+
+
+
+This is RAxML version 8.2.9 released by Alexandros Stamatakis on July 20 2016.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 34 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 0.00%
+
+RAxML rapid hill-climbing mode
+
+Using 2 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 31
+Name: No Name Provided
+DataType: DNA
+Substitution Matrix: GTR
+
+
+
+Partition: 1
+Alignment Patterns: 3
+Name: SECONDARY STRUCTURE 16 STATE MODEL
+DataType: SECONDARY STRUCTURE
+Substitution Matrix: S16 (GTR)
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS-SSE3 -T2 -m GTRGAMMA -p 12345 -S secondaryStructure.txt -s dna.phy -n T26 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.330 0.287 0.167 0.217 
+
+Partition: 1 with name: SECONDARY STRUCTURE 16 STATE MODEL
+Base frequencies: 0.033 0.001 0.165 0.001 0.198 0.001 0.099 0.001 0.033 0.001 0.001 0.001 0.099 0.298 0.066 0.001 
+
+
+WARNING the alpha parameter with a value of 13.578266 estimated by RAxML for partition number 1 with the name "SECONDARY STRUCTURE 16 STATE MODEL"
+is larger than 10.000000. You should do a model test and confirm that you actually need to incorporate a model of rate heterogeneity!
+You can run inferences with a plain substitution model (without rate heterogeneity) by specifyng the CAT model and the "-V" option!
+
+
+WARNING the alpha parameter with a value of 31.543960 estimated by RAxML for partition number 1 with the name "SECONDARY STRUCTURE 16 STATE MODEL"
+is larger than 10.000000. You should do a model test and confirm that you actually need to incorporate a model of rate heterogeneity!
+You can run inferences with a plain substitution model (without rate heterogeneity) by specifyng the CAT model and the "-V" option!
+
+
+WARNING the alpha parameter with a value of 72.907578 estimated by RAxML for partition number 1 with the name "SECONDARY STRUCTURE 16 STATE MODEL"
+is larger than 10.000000. You should do a model test and confirm that you actually need to incorporate a model of rate heterogeneity!
+You can run inferences with a plain substitution model (without rate heterogeneity) by specifyng the CAT model and the "-V" option!
+
+Inference[0]: Time 2.328802 GAMMA-based likelihood -367.162466, best rearrangement setting 5
+alpha[0]: 0.267941 rates[0] ac ag at cg ct gt: 0.363558 1.437178 1.770792 0.020175 10.698108 1.000000 alpha[1]: 72.907578 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+
+WARNING the alpha parameter with a value of 159.115498 estimated by RAxML for partition number 1 with the name "SECONDARY STRUCTURE 16 STATE MODEL"
+is larger than 10.000000. You should do a model test and confirm that you actually need to incorporate a model of rate heterogeneity!
+You can run inferences with a plain substitution model (without rate heterogeneity) by specifyng the CAT model and the "-V" option!
+
+
+WARNING the alpha parameter with a value of 358.123740 estimated by RAxML for partition number 1 with the name "SECONDARY STRUCTURE 16 STATE MODEL"
+is larger than 10.000000. You should do a model test and confirm that you actually need to incorporate a model of rate heterogeneity!
+You can run inferences with a plain substitution model (without rate heterogeneity) by specifyng the CAT model and the "-V" option!
+
+
+WARNING the alpha parameter with a value of 817.540813 estimated by RAxML for partition number 1 with the name "SECONDARY STRUCTURE 16 STATE MODEL"
+is larger than 10.000000. You should do a model test and confirm that you actually need to incorporate a model of rate heterogeneity!
+You can run inferences with a plain substitution model (without rate heterogeneity) by specifyng the CAT model and the "-V" option!
+
+
+WARNING the alpha parameter with a value of 1000.000000 estimated by RAxML for partition number 1 with the name "SECONDARY STRUCTURE 16 STATE MODEL"
+is larger than 10.000000. You should do a model test and confirm that you actually need to incorporate a model of rate heterogeneity!
+You can run inferences with a plain substitution model (without rate heterogeneity) by specifyng the CAT model and the "-V" option!
+
+
+WARNING the alpha parameter with a value of 1000.000000 estimated by RAxML for partition number 1 with the name "SECONDARY STRUCTURE 16 STATE MODEL"
+is larger than 10.000000. You should do a model test and confirm that you actually need to incorporate a model of rate heterogeneity!
+You can run inferences with a plain substitution model (without rate heterogeneity) by specifyng the CAT model and the "-V" option!
+
+
+WARNING the alpha parameter with a value of 1000.000000 estimated by RAxML for partition number 1 with the name "SECONDARY STRUCTURE 16 STATE MODEL"
+is larger than 10.000000. You should do a model test and confirm that you actually need to incorporate a model of rate heterogeneity!
+You can run inferences with a plain substitution model (without rate heterogeneity) by specifyng the CAT model and the "-V" option!
+
+
+WARNING the alpha parameter with a value of 1000.000000 estimated by RAxML for partition number 1 with the name "SECONDARY STRUCTURE 16 STATE MODEL"
+is larger than 10.000000. You should do a model test and confirm that you actually need to incorporate a model of rate heterogeneity!
+You can run inferences with a plain substitution model (without rate heterogeneity) by specifyng the CAT model and the "-V" option!
+
+Inference[0] final GAMMA-based Likelihood: -365.487183 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/Hands-On/RAxML_result.T26
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -365.487183 .... 
+
+Final GAMMA-based Score of best tree -365.275413
+
+Program execution info written to /home/bbista/eeob563/eeob563-labs/lab4/Hands-On/RAxML_info.T26
+Best-scoring ML tree written to: /home/bbista/eeob563/eeob563-labs/lab4/Hands-On/RAxML_bestTree.T26
+
+Overall execution time: 4.658702 secs or 0.001294 hours or 0.000054 days
+

@@ -1,0 +1,68 @@
+
+
+This is RAxML version 8.2.9 released by Alexandros Stamatakis on July 20 2016.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 25 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 1.40%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 1 inferences on the original alignment using 1 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 25
+Name: No Name Provided
+DataType: Multi-State with 5 distinct states in use (maximum 32)
+Substitution Matrix: MK model
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS-SSE3 -T2 -p 12345 -m MULTIGAMMA -s multiState.phy -K MK -n T11 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.200 0.200 0.200 0.200 0.200 
+
+Inference[0]: Time 0.282066 GAMMA-based likelihood -323.438761, best rearrangement setting 5
+alpha[0]: 0.512608 
+
+
+Conducting final model optimizations on all 1 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -323.415298 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/Hands-On/RAxML_result.T11
+
+
+Starting final GAMMA-based thorough Optimization on tree 0 likelihood -323.415298 .... 
+
+Final GAMMA-based Score of best tree -323.415298
+
+Program execution info written to /home/bbista/eeob563/eeob563-labs/lab4/Hands-On/RAxML_info.T11
+Best-scoring ML tree written to: /home/bbista/eeob563/eeob563-labs/lab4/Hands-On/RAxML_bestTree.T11
+
+Overall execution time: 0.376332 secs or 0.000105 hours or 0.000004 days
+
