@@ -1,0 +1,48 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Thu Feb  8 10:21:40 2018]
+[!
+>Data file = cob.nex
+>Bootstrap method with heuristic search:
+>  Number of bootstrap replicates = 200
+>  Starting seed = generated automatically
+>  Number of characters resampled in each replicate = 1149
+>  Optimality criterion = distance (unweighted least squares (power=0))
+>    Negative branch lengths allowed, but set to zero for tree-score calculation
+>    Distance measure = HKY85
+>  Starting tree(s) obtained via neighbor-joining
+>  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+>    Steepest descent option not in effect
+>  Initial 'Maxtrees' setting = 100
+>  Zero-length branches not collapsed
+>  'MulTrees' option in effect
+>  No topological constraints in effect
+>  Trees are unrooted
+>
+>  200 bootstrap replicates completed
+>  Time used = 5.21 sec (CPU time = 5.13 sec)
+]
+	Translate
+		1 Platypus,
+		2 Echidna,
+		3 Opossum,
+		4 Wallaby,
+		5 Bandicoot,
+		6 Elephant,
+		7 Aardvark,
+		8 Tenrec,
+		9 Sloth,
+		10 Armadillo,
+		11 Human,
+		12 Tree_shrew,
+		13 Rabbit,
+		14 Mouse,
+		15 Hedgehog,
+		16 Flying_fox,
+		17 Cat,
+		18 Dog,
+		19 Pig,
+		20 Whale
+		;
+tree 'PAUP_1' = [&U] (1:100,2:100,((3:100,4:100,5:100):94.5,(6:100,7:100,(8:100,15:100):52,9:100,10:100,11:100,12:100,13:100,14:100,(16:100,(19:100,20:100):78):56.5,17:100,18:100):64):100);
+End;

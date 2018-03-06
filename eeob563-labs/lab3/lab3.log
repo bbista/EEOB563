@@ -1,0 +1,1516 @@
+
+P A U P *
+Version 4.0a (build 159) for Unix/Linux (built on Nov 17 2017 at 11:35:17)
+Thu Feb  8 09:41:28 2018
+
+        -----------------------------NOTICE-----------------------------
+          This is an alpha-test version that is still changing rapidly.
+          It will expire on 1 Apr 2018.
+        
+          Please report bugs to dave@phylosolutions.com
+        ----------------------------------------------------------------
+
+
+paup> ls
+
+Error(#145): Ambiguous command abbreviation: ls (LSet LScores)
+
+paup> set criterion=distance
+
+Optimality criterion set to distance.
+
+paup> dset objective=me dist=jc
+
+paup> hsearch
+
+Heuristic search settings:
+  Optimality criterion = distance (minimum evolution)
+    Negative branch lengths allowed, but set to zero for tree-score calculation
+    Distance measure = Jukes-Cantor
+    1149 characters are included
+  Starting tree(s) obtained via neighbor-joining
+  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+    Steepest descent option not in effect
+  Initial 'Maxtrees' setting = 100
+  Zero-length branches not collapsed
+  'MulTrees' option in effect
+  No topological constraints in effect
+  Trees are unrooted
+
+Heuristic search completed
+  Total number of rearrangements tried = 2472
+  Score of best tree(s) found = 2.79577
+  Number of trees retained = 1
+  Time used = 0.03 sec (CPU time = 0.03 sec)
+
+paup> showdistance
+
+Error(#152): Command "showdistance" is unrecognized.
+                 If it is spelled correctly, look for problems in a previous command, such as an unintentional semicolon.
+
+paup> showdist
+
+Jukes-Cantor distance matrix
+  1149 characters are included
+
+                     1        2        3        4        5        6        7        8        9       10       11       12       13
+ 1 Platypus          -
+ 2 Echidna     0.21488        -
+ 3 Opossum     0.34326  0.32001        -
+ 4 Wallaby     0.30776  0.29213  0.25284        -
+ 5 Bandicoot   0.31163  0.32626  0.24508  0.23396        -
+ 6 Elephant    0.35273  0.37555  0.34024  0.33823  0.31665        -
+ 7 Aardvark    0.31470  0.30278  0.28338  0.28693  0.26997  0.30095        -
+ 8 Tenrec      0.36150  0.35584  0.31871  0.31304  0.30872  0.33726  0.29106        -
+ 9 Sloth       0.39342  0.37151  0.35583  0.31191  0.34852  0.31555  0.29885  0.35725        -
+10 Armadillo   0.34326  0.33774  0.31612  0.28805  0.25863  0.31699  0.25569  0.29365  0.26313        -
+11 Human       0.39128  0.36939  0.36345  0.31507  0.32678  0.36504  0.29774  0.37199  0.31914  0.30317        -
+12 Tree shrew  0.34389  0.32335  0.30609  0.30955  0.31197  0.35000  0.26607  0.34802  0.31545  0.27492  0.33145        -
+13 Rabbit      0.33668  0.32847  0.31908  0.28992  0.31196  0.32231  0.25229  0.31903  0.31244  0.26845  0.30822  0.29932        -
+14 Mouse       0.29895  0.30417  0.28454  0.27946  0.25775  0.33351  0.27706  0.30690  0.31331  0.25453  0.30593  0.27008  0.27224
+15 Hedgehog    0.37295  0.38752  0.33512  0.35676  0.31720  0.36815  0.32410  0.33636  0.39194  0.30542  0.37903  0.35921  0.33397
+16 Flying fox  0.32952  0.32275  0.29887  0.28821  0.29290  0.32097  0.27951  0.30806  0.29885  0.27317  0.30851  0.27221  0.26835
+17 Cat         0.35023  0.30938  0.31072  0.29600  0.29419  0.31026  0.26563  0.30147  0.29235  0.27570  0.27728  0.28510  0.25352
+18 Dog         0.36293  0.34465  0.29887  0.31568  0.32350  0.32097  0.26065  0.30542  0.33089  0.27191  0.31104  0.27619  0.26717
+19 Pig         0.30674  0.27696  0.29891  0.28809  0.28274  0.32507  0.24711  0.29885  0.29625  0.24589  0.30846  0.26109  0.28113
+20 Whale       0.34049  0.31737  0.31605  0.29084  0.29551  0.31164  0.29365  0.31871  0.30806  0.25569  0.33137  0.31261  0.28623
+
+Jukes-Cantor distance matrix (continued)
+
+                    14       15       16       17       18       19       20
+14 Mouse             -
+15 Hedgehog    0.31224        -
+16 Flying fox  0.25452  0.33089        -
+17 Cat         0.25328  0.33089  0.23501        -
+18 Dog         0.27581  0.32275  0.26813  0.24711        -
+19 Pig         0.24356  0.32681  0.21840  0.23742  0.22904        -
+20 Whale       0.28855  0.36435  0.25569  0.26813  0.27317  0.21255        -
+
+paup> hsearch ?
+
+Usage: HSearch [options...] ;
+
+Available options:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+swap            none|NNI|SPR|TBR                                   TBR
+keep            <real-value>|No                                    No
+mulTrees        no|yes                                             yes
+writeCurTree    no|yes                                             no
+enforce         no|yes                                             no
+constraints     <constraint-name>                                  (none)
+converse        no|yes                                             no
+reconLimit      <integer-value>|infinity                           8
+nchuck          <integer-value>                                    0
+chuckScore      <real-value>|No                                    No
+start           stepwise|NJ|current|<tree-number>[-<tree-number>] *NJ
+addSeq          simple|closest|asIs|random|furthest                simple
+nreps           <integer-value>                                    10
+rseed           <int> or <int:int:int:int>                         0
+rstatus         no|yes                                             no
+saveReps        no|yes                                             no
+refTax          <integer-value>                                    0
+hold            <integer-value>|No                                 1
+nbest           <integer-value>|all                                all
+allSwap         no|yes                                             no
+useNonMin       no|yes                                             no
+steepest        no|yes                                             no
+abortRep        no|yes                                             no
+retain          no|yes                                            *no
+statusWin       no|yes                                             yes
+dStatus         <integer-value>|none                               60
+randomize       addSeq|trees                                       addSeq
+timeLimit       <integer-value>|none                               none
+rearrLimit      <integer-value>|none                               none
+limitPerRep     no|yes                                             no
+                                                 *Option is nonpersistent
+
+paup> NJ
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = Jukes-Cantor
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/-------------------------------------- Platypus
+|
+|         /------------------------------------------- Echidna
+|         |
+|         |                                   /------------------------------------------------------- Opossum
+|         |                                  /+
+|         |                                  |\------------------------------------------------- Bandicoot
+|         |                           /------+
+|         |                           |      \--------------------------------------------------- Wallaby
+|         |                           |
+|         |                           |               /---------------------------------------------------------------------- Elephant
+\---------+                           |          /----+
+          |                           |          |    \----------------------------------------------------------------- Sloth
+          |                           |       /--+
+          |                           |       |  \--------------------------------------------------- Armadillo
+          |                           |       |
+          |                           |       |  /---------------------------------------------------- Aardvark
+          |                           |     /-+/-+
+          |                           |     | || \--------------------------------------------------------- Rabbit
+          \---------------------------+     | ||
+                                      |     | ||     /--------------------------------------------------------------------- Human
+                                      |     | \+/----+
+                                      |     |  ||    \------------------------------------------------ Cat
+                                      |     |  ||
+                                      |     |  \+ /--------------------------------------------------------------- Tree shrew
+                                      |     |   |/+
+                                      |   /-+   ||\------------------------------------------------------ Dog
+                                      |   | |   \+
+                                      |   | |    |    /-------------------------------------------------- Flying fox
+                                      |   | |    |    |
+                                      |   | |    \----+     /--------------------------------------- Pig
+                                      |   | |         \-----+
+                                      \---+ |               \--------------------------------------------------- Whale
+                                          | |
+                                          | |    /------------------------------------------------------------------- Tenrec
+                                          | \----+
+                                          |      \---------------------------------------------------------------------------- Hedgehog
+                                          |
+                                          \---------------------------------------------------- Mouse
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> UPGMA
+
+UPGMA search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = Jukes-Cantor
+  1149 characters are included
+  (Tree is rooted)
+
+UPGMA tree:
+
+                                               /------------------------------------------------------------------------------ Platypus
+    /------------------------------------------+
+    |                                          \------------------------------------------------------------------------------ Echidna
+    |
+    |                              /------------------------------------------------------------------------------------------ Opossum
+    |                              |
+    |             /----------------+    /------------------------------------------------------------------------------------- Wallaby
+    |             |                \----+
+    |             |                     \------------------------------------------------------------------------------------- Bandicoot
+    |             |
+    |             |               /------------------------------------------------------------------------------------------- Aardvark
+    |             |        /------+
+    |             |        |      \------------------------------------------------------------------------------------------- Rabbit
+    |             |        |
+    |        /----+        |     /-------------------------------------------------------------------------------------------- Armadillo
+    |        |    |     /--+ /---+
+    |        |    |     |  | |   \-------------------------------------------------------------------------------------------- Mouse
+/---+        |    |     |  | |
+|   |        |    |     |  | |          /------------------------------------------------------------------------------------- Flying fox
+|   |        |    |     |  \-+      /---+
+|   |        |    |     |    |      |   \------------------------------------------------------------------------------------- Cat
+|   |        |    |     |    |   /--+
+|   |      /-+    \-----+    |   |  |           /----------------------------------------------------------------------------- Pig
+|   |      | |          |    |   |  \-----------+
+|   |      | |          |    \---+              \----------------------------------------------------------------------------- Whale
+|   |      | |          |        |
+|   |      | |          |        \-------------------------------------------------------------------------------------------- Dog
+|   |     /+ |          |
+|   |     || |          \----------------------------------------------------------------------------------------------------- Tree shrew
+|   |     || |
+|   |  /--+| \---------------------------------------------------------------------------------------------------------------- Tenrec
+|   |  |  ||
+|   |  |  |\------------------------------------------------------------------------------------------------------------------ Sloth
+|   \--+  |
+|      |  \------------------------------------------------------------------------------------------------------------------- Human
+|      |
+|      \---------------------------------------------------------------------------------------------------------------------- Elephant
+|
+\----------------------------------------------------------------------------------------------------------------------------- Hedgehog
+
+Tree found by UPGMA method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> NJ ?
+
+Usage: NJ [options...] ;
+
+Available options:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+enforce         no|yes                                             no
+constraints     <constraint-name>                                  (none)
+BioNJ           no|yes                                             no
+showTree        no|yes                                             yes
+breakTies       systematic|random                                  systematic
+tieSeed         <int> or <int:int:int:int>                         0
+treefile        <filename-for-treefile>                            (none)
+replace         no|yes                                            *no
+append          no|yes                                            *no
+brLens          no|yes                                             no
+
+The following 'DSet' options are also available:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+distance        user|total|mean|abs|P|JC|F81|TajNei|K2P|F84|HKY85|
+                K3P|TamNei|GTR|custom|ML|logDet|Upholt|NeiLiSite|
+                NeiLiFrag                                          JC
+objective       lsFit|BME|ME                                       ME
+lsWts           std|expo|user                                      std
+power           <real-value>                                       0
+pexp            <real-value>                                       0
+pInvar          <real-value>                                       0
+rates           equal|gamma                                        equal
+shape           <real-value>                                       0.5
+removeFreq      proportional|equal                                 proportional
+estFreq         all|constant                                       all
+allSitesMean    no|yes                                             yes
+subst           all|tv|ti|tratio                                   all
+recSeqLen       <integer-value>                                    6
+class           (<cAC><cAG><cAT><cCG><cCT><cGT>)                   (a a a a a a)
+baseFreq        equal|empirical                                    empirical
+missDist        infer|ignore                                       infer
+negBrLen        prohibit|allow|setZero|setAbsVal                   setZero
+undefMult       <real-value>                                       2
+dCollapse       no|yes                                             no
+psdk            1|nbranches                                        nbranches
+psdAddK         <integer-value>                                    0
+precision       <integer-value>                                    5
+                                                 *Option is nonpersistent
+
+paup> dset ?
+
+Usage: DSet [options...] ;
+
+Available options:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+distance        user|total|mean|abs|P|JC|F81|TajNei|K2P|F84|HKY85|
+                K3P|TamNei|GTR|custom|ML|logDet|Upholt|NeiLiSite|
+                NeiLiFrag                                          JC
+objective       lsFit|BME|ME                                       ME
+lsWts           std|expo|user                                      std
+power           <real-value>                                       0
+pexp            <real-value>                                       0
+pInvar          <real-value>                                       0
+rates           equal|gamma                                        equal
+shape           <real-value>                                       0.5
+removeFreq      proportional|equal                                 proportional
+estFreq         all|constant                                       all
+allSitesMean    no|yes                                             yes
+subst           all|tv|ti|tratio                                   all
+recSeqLen       <integer-value>                                    6
+class           (<cAC><cAG><cAT><cCG><cCT><cGT>)                   (a a a a a a)
+baseFreq        equal|empirical                                    empirical
+missDist        infer|ignore                                       infer
+negBrLen        prohibit|allow|setZero|setAbsVal                   setZero
+undefMult       <real-value>                                       2
+dCollapse       no|yes                                             no
+psdk            1|nbranches                                        nbranches
+psdAddK         <integer-value>                                    0
+precision       <integer-value>                                    5
+
+paup> set ?
+
+Usage: Set [options...] ;
+
+Optimality criterion, general search settings, etc.:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+criterion       parsimony|likelihood|distance                      distance
+maxtrees        <integer-value>                                    100
+increase        no|prompt|auto                                     prompt
+autoInc         <integer-value>                                    100
+constraints     <constraint-name>                                  (none)
+statusWin       no|yes                                             yes
+dStatus         <integer-value>|none                               60
+autoClose       no|yes                                             yes
+notifyBeep      no|yes                                             no
+
+Options for Nexus file input/output:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+allDigLab       prohibit|warn|noWarn                               warn
+allowPunct      no|yes                                             no
+nexusBlocks     data|taxaChar                                      data
+taxlabMatch     relaxed|strict                                     strict
+underscores     convert|keep                                       convert
+hashComments    no|yes                                             no
+
+Options for tree rooting and input/output:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+rootMethod      outgroup|lundberg|midpoint                         outgroup
+outRoot         polytomy|paraphyl|monophyl                         polytomy
+forcePolyt      no|yes                                             no
+storeBrLens     no|yes                                             yes
+storeTreeWts    no|yes                                             yes
+
+Warning/error settings:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+warnReset       no|yes                                             yes
+warnTree        no|yes                                             yes
+warnTSave       no|yes                                             yes
+warnBlkName     no|yes                                             yes
+warnRoot        no|yes                                             yes
+warnRedef       no|yes                                             yes
+warnTFileNoData no|yes                                             no
+errorStop       no|yes                                             yes
+errorBeep       no|yes                                             yes
+queryBeep       no|yes                                             yes
+
+Options for matrix output:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+showExcluded    no|yes                                             no
+cmLabels        no|yes                                             no
+cmShowEq        no|yes                                             yes
+cmColWidth      <integer-value>                                    1
+cmCstatus       no|yes                                             no
+
+Options for tree drawing:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+semiGraph       no|yes                                             no
+tOrder          standard|right|left|alphabet                       standard
+tCompress       no|yes                                             no
+showTaxNum      no|yes                                             no
+taxLabels       truncate|full                                      truncate
+
+Miscellaneous settings:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+monitor         no|yes                                             yes
+flushLog        no|yes                                             no
+dataStorage     full|compact                                       compact
+defaultMode     no|yes                                             no
+showAbbrev      no|yes                                             no
+outwidth        <integer-value>|auto                              *auto
+pause           no|silent|beep|msg                                 no
+fLock           no|yes                                             yes
+                                                 *Option is nonpersistent
+
+paup> NJ 
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = Jukes-Cantor
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/-------------------------------------- Platypus
+|
+|         /------------------------------------------- Echidna
+|         |
+|         |                                   /------------------------------------------------------- Opossum
+|         |                                  /+
+|         |                                  |\------------------------------------------------- Bandicoot
+|         |                           /------+
+|         |                           |      \--------------------------------------------------- Wallaby
+|         |                           |
+|         |                           |               /---------------------------------------------------------------------- Elephant
+\---------+                           |          /----+
+          |                           |          |    \----------------------------------------------------------------- Sloth
+          |                           |       /--+
+          |                           |       |  \--------------------------------------------------- Armadillo
+          |                           |       |
+          |                           |       |  /---------------------------------------------------- Aardvark
+          |                           |     /-+/-+
+          |                           |     | || \--------------------------------------------------------- Rabbit
+          \---------------------------+     | ||
+                                      |     | ||     /--------------------------------------------------------------------- Human
+                                      |     | \+/----+
+                                      |     |  ||    \------------------------------------------------ Cat
+                                      |     |  ||
+                                      |     |  \+ /--------------------------------------------------------------- Tree shrew
+                                      |     |   |/+
+                                      |   /-+   ||\------------------------------------------------------ Dog
+                                      |   | |   \+
+                                      |   | |    |    /-------------------------------------------------- Flying fox
+                                      |   | |    |    |
+                                      |   | |    \----+     /--------------------------------------- Pig
+                                      |   | |         \-----+
+                                      \---+ |               \--------------------------------------------------- Whale
+                                          | |
+                                          | |    /------------------------------------------------------------------- Tenrec
+                                          | \----+
+                                          |      \---------------------------------------------------------------------------- Hedgehog
+                                          |
+                                          \---------------------------------------------------- Mouse
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> showdisy
+
+Error(#152): Command "showdisy" is unrecognized.
+                 If it is spelled correctly, look for problems in a previous command, such as an unintentional semicolon.
+
+paup> showdist
+
+Jukes-Cantor distance matrix
+  1149 characters are included
+
+                     1        2        3        4        5        6        7        8        9       10       11       12       13
+ 1 Platypus          -
+ 2 Echidna     0.21488        -
+ 3 Opossum     0.34326  0.32001        -
+ 4 Wallaby     0.30776  0.29213  0.25284        -
+ 5 Bandicoot   0.31163  0.32626  0.24508  0.23396        -
+ 6 Elephant    0.35273  0.37555  0.34024  0.33823  0.31665        -
+ 7 Aardvark    0.31470  0.30278  0.28338  0.28693  0.26997  0.30095        -
+ 8 Tenrec      0.36150  0.35584  0.31871  0.31304  0.30872  0.33726  0.29106        -
+ 9 Sloth       0.39342  0.37151  0.35583  0.31191  0.34852  0.31555  0.29885  0.35725        -
+10 Armadillo   0.34326  0.33774  0.31612  0.28805  0.25863  0.31699  0.25569  0.29365  0.26313        -
+11 Human       0.39128  0.36939  0.36345  0.31507  0.32678  0.36504  0.29774  0.37199  0.31914  0.30317        -
+12 Tree shrew  0.34389  0.32335  0.30609  0.30955  0.31197  0.35000  0.26607  0.34802  0.31545  0.27492  0.33145        -
+13 Rabbit      0.33668  0.32847  0.31908  0.28992  0.31196  0.32231  0.25229  0.31903  0.31244  0.26845  0.30822  0.29932        -
+14 Mouse       0.29895  0.30417  0.28454  0.27946  0.25775  0.33351  0.27706  0.30690  0.31331  0.25453  0.30593  0.27008  0.27224
+15 Hedgehog    0.37295  0.38752  0.33512  0.35676  0.31720  0.36815  0.32410  0.33636  0.39194  0.30542  0.37903  0.35921  0.33397
+16 Flying fox  0.32952  0.32275  0.29887  0.28821  0.29290  0.32097  0.27951  0.30806  0.29885  0.27317  0.30851  0.27221  0.26835
+17 Cat         0.35023  0.30938  0.31072  0.29600  0.29419  0.31026  0.26563  0.30147  0.29235  0.27570  0.27728  0.28510  0.25352
+18 Dog         0.36293  0.34465  0.29887  0.31568  0.32350  0.32097  0.26065  0.30542  0.33089  0.27191  0.31104  0.27619  0.26717
+19 Pig         0.30674  0.27696  0.29891  0.28809  0.28274  0.32507  0.24711  0.29885  0.29625  0.24589  0.30846  0.26109  0.28113
+20 Whale       0.34049  0.31737  0.31605  0.29084  0.29551  0.31164  0.29365  0.31871  0.30806  0.25569  0.33137  0.31261  0.28623
+
+Jukes-Cantor distance matrix (continued)
+
+                    14       15       16       17       18       19       20
+14 Mouse             -
+15 Hedgehog    0.31224        -
+16 Flying fox  0.25452  0.33089        -
+17 Cat         0.25328  0.33089  0.23501        -
+18 Dog         0.27581  0.32275  0.26813  0.24711        -
+19 Pig         0.24356  0.32681  0.21840  0.23742  0.22904        -
+20 Whale       0.28855  0.36435  0.25569  0.26813  0.27317  0.21255        -
+
+paup> UPGMA
+
+UPGMA search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = Jukes-Cantor
+  1149 characters are included
+  (Tree is rooted)
+
+UPGMA tree:
+
+                                               /------------------------------------------------------------------------------ Platypus
+    /------------------------------------------+
+    |                                          \------------------------------------------------------------------------------ Echidna
+    |
+    |                              /------------------------------------------------------------------------------------------ Opossum
+    |                              |
+    |             /----------------+    /------------------------------------------------------------------------------------- Wallaby
+    |             |                \----+
+    |             |                     \------------------------------------------------------------------------------------- Bandicoot
+    |             |
+    |             |               /------------------------------------------------------------------------------------------- Aardvark
+    |             |        /------+
+    |             |        |      \------------------------------------------------------------------------------------------- Rabbit
+    |             |        |
+    |        /----+        |     /-------------------------------------------------------------------------------------------- Armadillo
+    |        |    |     /--+ /---+
+    |        |    |     |  | |   \-------------------------------------------------------------------------------------------- Mouse
+/---+        |    |     |  | |
+|   |        |    |     |  | |          /------------------------------------------------------------------------------------- Flying fox
+|   |        |    |     |  \-+      /---+
+|   |        |    |     |    |      |   \------------------------------------------------------------------------------------- Cat
+|   |        |    |     |    |   /--+
+|   |      /-+    \-----+    |   |  |           /----------------------------------------------------------------------------- Pig
+|   |      | |          |    |   |  \-----------+
+|   |      | |          |    \---+              \----------------------------------------------------------------------------- Whale
+|   |      | |          |        |
+|   |      | |          |        \-------------------------------------------------------------------------------------------- Dog
+|   |     /+ |          |
+|   |     || |          \----------------------------------------------------------------------------------------------------- Tree shrew
+|   |     || |
+|   |  /--+| \---------------------------------------------------------------------------------------------------------------- Tenrec
+|   |  |  ||
+|   |  |  |\------------------------------------------------------------------------------------------------------------------ Sloth
+|   \--+  |
+|      |  \------------------------------------------------------------------------------------------------------------------- Human
+|      |
+|      \---------------------------------------------------------------------------------------------------------------------- Elephant
+|
+\----------------------------------------------------------------------------------------------------------------------------- Hedgehog
+
+Tree found by UPGMA method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> showdist
+
+Jukes-Cantor distance matrix
+  1149 characters are included
+
+                     1        2        3        4        5        6        7        8        9       10       11       12       13
+ 1 Platypus          -
+ 2 Echidna     0.21488        -
+ 3 Opossum     0.34326  0.32001        -
+ 4 Wallaby     0.30776  0.29213  0.25284        -
+ 5 Bandicoot   0.31163  0.32626  0.24508  0.23396        -
+ 6 Elephant    0.35273  0.37555  0.34024  0.33823  0.31665        -
+ 7 Aardvark    0.31470  0.30278  0.28338  0.28693  0.26997  0.30095        -
+ 8 Tenrec      0.36150  0.35584  0.31871  0.31304  0.30872  0.33726  0.29106        -
+ 9 Sloth       0.39342  0.37151  0.35583  0.31191  0.34852  0.31555  0.29885  0.35725        -
+10 Armadillo   0.34326  0.33774  0.31612  0.28805  0.25863  0.31699  0.25569  0.29365  0.26313        -
+11 Human       0.39128  0.36939  0.36345  0.31507  0.32678  0.36504  0.29774  0.37199  0.31914  0.30317        -
+12 Tree shrew  0.34389  0.32335  0.30609  0.30955  0.31197  0.35000  0.26607  0.34802  0.31545  0.27492  0.33145        -
+13 Rabbit      0.33668  0.32847  0.31908  0.28992  0.31196  0.32231  0.25229  0.31903  0.31244  0.26845  0.30822  0.29932        -
+14 Mouse       0.29895  0.30417  0.28454  0.27946  0.25775  0.33351  0.27706  0.30690  0.31331  0.25453  0.30593  0.27008  0.27224
+15 Hedgehog    0.37295  0.38752  0.33512  0.35676  0.31720  0.36815  0.32410  0.33636  0.39194  0.30542  0.37903  0.35921  0.33397
+16 Flying fox  0.32952  0.32275  0.29887  0.28821  0.29290  0.32097  0.27951  0.30806  0.29885  0.27317  0.30851  0.27221  0.26835
+17 Cat         0.35023  0.30938  0.31072  0.29600  0.29419  0.31026  0.26563  0.30147  0.29235  0.27570  0.27728  0.28510  0.25352
+18 Dog         0.36293  0.34465  0.29887  0.31568  0.32350  0.32097  0.26065  0.30542  0.33089  0.27191  0.31104  0.27619  0.26717
+19 Pig         0.30674  0.27696  0.29891  0.28809  0.28274  0.32507  0.24711  0.29885  0.29625  0.24589  0.30846  0.26109  0.28113
+20 Whale       0.34049  0.31737  0.31605  0.29084  0.29551  0.31164  0.29365  0.31871  0.30806  0.25569  0.33137  0.31261  0.28623
+
+Jukes-Cantor distance matrix (continued)
+
+                    14       15       16       17       18       19       20
+14 Mouse             -
+15 Hedgehog    0.31224        -
+16 Flying fox  0.25452  0.33089        -
+17 Cat         0.25328  0.33089  0.23501        -
+18 Dog         0.27581  0.32275  0.26813  0.24711        -
+19 Pig         0.24356  0.32681  0.21840  0.23742  0.22904        -
+20 Whale       0.28855  0.36435  0.25569  0.26813  0.27317  0.21255        -
+
+paup> nj
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = Jukes-Cantor
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/-------------------------------------- Platypus
+|
+|         /------------------------------------------- Echidna
+|         |
+|         |                                   /------------------------------------------------------- Opossum
+|         |                                  /+
+|         |                                  |\------------------------------------------------- Bandicoot
+|         |                           /------+
+|         |                           |      \--------------------------------------------------- Wallaby
+|         |                           |
+|         |                           |               /---------------------------------------------------------------------- Elephant
+\---------+                           |          /----+
+          |                           |          |    \----------------------------------------------------------------- Sloth
+          |                           |       /--+
+          |                           |       |  \--------------------------------------------------- Armadillo
+          |                           |       |
+          |                           |       |  /---------------------------------------------------- Aardvark
+          |                           |     /-+/-+
+          |                           |     | || \--------------------------------------------------------- Rabbit
+          \---------------------------+     | ||
+                                      |     | ||     /--------------------------------------------------------------------- Human
+                                      |     | \+/----+
+                                      |     |  ||    \------------------------------------------------ Cat
+                                      |     |  ||
+                                      |     |  \+ /--------------------------------------------------------------- Tree shrew
+                                      |     |   |/+
+                                      |   /-+   ||\------------------------------------------------------ Dog
+                                      |   | |   \+
+                                      |   | |    |    /-------------------------------------------------- Flying fox
+                                      |   | |    |    |
+                                      |   | |    \----+     /--------------------------------------- Pig
+                                      |   | |         \-----+
+                                      \---+ |               \--------------------------------------------------- Whale
+                                          | |
+                                          | |    /------------------------------------------------------------------- Tenrec
+                                          | \----+
+                                          |      \---------------------------------------------------------------------------- Hedgehog
+                                          |
+                                          \---------------------------------------------------- Mouse
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> showtree
+
+Note: No outgroup has been defined; tree is (arbitrarily) rooted at first taxon.
+
+Tree 1 (rooted using default outgroup)
+
+/----------------------------------------------------------------------------------------------------------------------------- Platypus
+|
+|          /------------------------------------------------------------------------------------------------------------------ Echidna
+|          |
+|          |                                                                                                      /----------- Opossum
+|          |                                                                                          /-----------+
+|          |                                                                                          |           \----------- Bandicoot
+|          |           /------------------------------------------------------------------------------+
+|          |           |                                                                              \----------------------- Wallaby
+|          |           |
+|          |           |                                                                                          /----------- Elephant
+\----------+           |                                                                              /-----------+
+           |           |                                                                              |           \----------- Sloth
+           |           |                                 /--------------------------------------------+
+           |           |                                 |                                            \----------------------- Armadillo
+           |           |                                 |
+           |           |                                 |                                                        /----------- Aardvark
+           |           |                     /-----------+          /---------------------------------------------+
+           |           |                     |           |          |                                             \----------- Rabbit
+           \-----------+                     |           |          |
+                       |                     |           |          |                                             /----------- Human
+                       |                     |           \----------+           /---------------------------------+
+                       |                     |                      |           |                                 \----------- Cat
+                       |                     |                      |           |
+                       |                     |                      \-----------+                                 /----------- Tree shrew
+                       |                     |                                  |          /----------------------+
+                       |          /----------+                                  |          |                      \----------- Dog
+                       |          |          |                                  \----------+
+                       |          |          |                                             |          /----------------------- Flying fox
+                       |          |          |                                             |          |
+                       |          |          |                                             \----------+           /----------- Pig
+                       |          |          |                                                        \-----------+
+                       \----------+          |                                                                    \----------- Whale
+                                  |          |
+                                  |          |                                                                    /----------- Tenrec
+                                  |          \--------------------------------------------------------------------+
+                                  |                                                                               \----------- Hedgehog
+                                  |
+                                  \------------------------------------------------------------------------------------------- Mouse
+
+paup> hsearch ?
+
+Usage: HSearch [options...] ;
+
+Available options:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+swap            none|NNI|SPR|TBR                                   TBR
+keep            <real-value>|No                                    No
+mulTrees        no|yes                                             yes
+writeCurTree    no|yes                                             no
+enforce         no|yes                                             no
+constraints     <constraint-name>                                  (none)
+converse        no|yes                                             no
+reconLimit      <integer-value>|infinity                           8
+nchuck          <integer-value>                                    0
+chuckScore      <real-value>|No                                    No
+start           stepwise|NJ|current|<tree-number>[-<tree-number>] *NJ
+addSeq          simple|closest|asIs|random|furthest                simple
+nreps           <integer-value>                                    10
+rseed           <int> or <int:int:int:int>                         0
+rstatus         no|yes                                             no
+saveReps        no|yes                                             no
+refTax          <integer-value>                                    0
+hold            <integer-value>|No                                 1
+nbest           <integer-value>|all                                all
+allSwap         no|yes                                             no
+useNonMin       no|yes                                             no
+steepest        no|yes                                             no
+abortRep        no|yes                                             no
+retain          no|yes                                            *no
+statusWin       no|yes                                             yes
+dStatus         <integer-value>|none                               60
+randomize       addSeq|trees                                       addSeq
+timeLimit       <integer-value>|none                               none
+rearrLimit      <integer-value>|none                               none
+limitPerRep     no|yes                                             no
+                                                 *Option is nonpersistent
+
+paup> dset?
+
+Error(#152): Command "dset?" is unrecognized.
+                 If it is spelled correctly, look for problems in a previous command, such as an unintentional semicolon.
+
+paup> dset ?
+
+Usage: DSet [options...] ;
+
+Available options:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+distance        user|total|mean|abs|P|JC|F81|TajNei|K2P|F84|HKY85|
+                K3P|TamNei|GTR|custom|ML|logDet|Upholt|NeiLiSite|
+                NeiLiFrag                                          JC
+objective       lsFit|BME|ME                                       ME
+lsWts           std|expo|user                                      std
+power           <real-value>                                       0
+pexp            <real-value>                                       0
+pInvar          <real-value>                                       0
+rates           equal|gamma                                        equal
+shape           <real-value>                                       0.5
+removeFreq      proportional|equal                                 proportional
+estFreq         all|constant                                       all
+allSitesMean    no|yes                                             yes
+subst           all|tv|ti|tratio                                   all
+recSeqLen       <integer-value>                                    6
+class           (<cAC><cAG><cAT><cCG><cCT><cGT>)                   (a a a a a a)
+baseFreq        equal|empirical                                    empirical
+missDist        infer|ignore                                       infer
+negBrLen        prohibit|allow|setZero|setAbsVal                   setZero
+undefMult       <real-value>                                       2
+dCollapse       no|yes                                             no
+psdk            1|nbranches                                        nbranches
+psdAddK         <integer-value>                                    0
+precision       <integer-value>                                    5
+
+paup> dset objective=me dist=p
+
+paup> nj
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = uncorrected ("p")
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/----------------------------------------- Platypus
+|
+|         /------------------------------------------------ Echidna
+|         |
+|         |                               /---------------------------------------------------------- Opossum
+|         |                              /+
+|         |                              |\----------------------------------------------------- Bandicoot
+|         |                       /------+
+|         |                       |      \------------------------------------------------------ Wallaby
+|         |                       |
+|         |                       |           /-------------------------------------------------------------------------- Elephant
+\---------+                       |           |
+          |                       |         /-+  /--------------------------------------------------------------------- Tenrec
+          |                       |         | \--+
+          |                       |        /+    \---------------------------------------------------------------------------- Hedgehog
+          |                       |        ||
+          |                       |        ||    /------------------------------------------------------------------- Sloth
+          |                       |        |\----+
+          |                       |       /+     \---------------------------------------------------- Armadillo
+          |                       |       ||
+          \-----------------------+       || /------------------------------------------------------ Aardvark
+                                  |       |\-+
+                                  |       |  \----------------------------------------------------------- Rabbit
+                                  |     /-+
+                                  |     | |   /----------------------------------------------------------------------- Human
+                                  |     | |/--+
+                                  |     | ||  \----------------------------------------------------- Cat
+                                  |     | ||
+                                  |     | \+    /----------------------------------------------------- Flying fox
+                                  |     |  |    |
+                                  |   /-+  |/---+    /-------------------------------------------- Pig
+                                  |   | |  ||   \----+
+                                  |   | |  \+        \------------------------------------------------------ Whale
+                                  |   | |   |
+                                  \---+ |   \---------------------------------------------------------- Dog
+                                      | |
+                                      | \---------------------------------------------------------------- Tree shrew
+                                      |
+                                      \-------------------------------------------------------- Mouse
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> dset objective=me dist=GTR
+
+paup> nj
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = general time-reversible
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/------------------------------------ Platypus
+|
+|        /----------------------------------------- Echidna
+|        |
+|        |                                 /---------------------------------------------------- Opossum
+|        |                                /+
+|        |                                |\--------------------------------------------- Bandicoot
+|        |                         /------+
+|        |                         |      \---------------------------------------------- Wallaby
+|        |                         |
+|        |                         |                 /------------------------------------------------------------------ Elephant
+\--------+                         |           /-----+
+         |                         |           |     \------------------------------------------------------------- Sloth
+         |                         |           |
+         |                         |         /-+     /-------------------------------------------------------------- Tenrec
+         |                         |         | | /---+
+         |                         |         | | |   \------------------------------------------------------------------------ Hedgehog
+         |                         |        /+ \-+
+         |                         |        ||   \---------------------------------------------- Armadillo
+         |                         |        ||
+         \-------------------------+        || /----------------------------------------------- Aardvark
+                                   |        |\-+
+                                   |        |  \---------------------------------------------------- Rabbit
+                                   |      /-+
+                                   |      | |     /---------------------------------------------------------------- Human
+                                   |      | |/----+
+                                   |      | ||    \-------------------------------------------- Cat
+                                   |      | ||
+                                   |      | \+    /---------------------------------------------- Flying fox
+                                   |   /--+  |    |
+                                   |   |  |  |/---+    /------------------------------------ Pig
+                                   |   |  |  ||   \----+
+                                   |   |  |  \+        \----------------------------------------------- Whale
+                                   |   |  |   |
+                                   \---+  |   \--------------------------------------------------- Dog
+                                       |  |
+                                       |  \-------------------------------------------------------- Tree shrew
+                                       |
+                                       \------------------------------------------------- Mouse
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> dset objective=me dist=HKY85
+
+paup> nj
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = HKY85
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/--------------------------------------- Platypus
+|
+|         /------------------------------------------- Echidna
+|         |
+|         |                                  /------------------------------------------------------- Opossum
+|         |                                 /+
+|         |                                 |\------------------------------------------------ Bandicoot
+|         |                          /------+
+|         |                          |      \-------------------------------------------------- Wallaby
+|         |                          |
+|         |                          |                /--------------------------------------------------------------------- Elephant
+\---------+                          |          /-----+
+          |                          |          |     \----------------------------------------------------------------- Sloth
+          |                          |       /--+
+          |                          |       |  \-------------------------------------------------- Armadillo
+          |                          |       |
+          |                          |       |   /-------------------------------------------------- Aardvark
+          |                          |     /-+/--+
+          |                          |     | ||  \------------------------------------------------------------- Tree shrew
+          \--------------------------+     | ||
+                                     |     | ||     /--------------------------------------------------------------------- Human
+                                     |     | ||  /--+
+                                     |     | \+  |  \------------------------------------------------ Cat
+                                     |     |  | /+
+                                     |     |  | |\--------------------------------------------------------- Rabbit
+                                     |     |  | |
+                                     |    /+  \-+     /------------------------------------------------- Flying fox
+                                     |    ||    |     |
+                                     |    ||    |/----+    /--------------------------------------- Pig
+                                     |    ||    ||    \----+
+                                     |    ||    \+         \--------------------------------------------------- Whale
+                                     |    ||     |
+                                     \----+|     \------------------------------------------------------ Dog
+                                          ||
+                                          ||     /------------------------------------------------------------------- Tenrec
+                                          |\-----+
+                                          |      \---------------------------------------------------------------------------- Hedgehog
+                                          |
+                                          \--------------------------------------------------- Mouse
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> nj ?
+
+Usage: NJ [options...] ;
+
+Available options:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+enforce         no|yes                                             no
+constraints     <constraint-name>                                  (none)
+BioNJ           no|yes                                             no
+showTree        no|yes                                             yes
+breakTies       systematic|random                                  systematic
+tieSeed         <int> or <int:int:int:int>                         0
+treefile        <filename-for-treefile>                            (none)
+replace         no|yes                                            *no
+append          no|yes                                            *no
+brLens          no|yes                                             no
+
+The following 'DSet' options are also available:
+
+Keyword ------- Option type -------------------------------------- Current setting -----------------
+distance        user|total|mean|abs|P|JC|F81|TajNei|K2P|F84|HKY85|
+                K3P|TamNei|GTR|custom|ML|logDet|Upholt|NeiLiSite|
+                NeiLiFrag                                          HKY85
+objective       lsFit|BME|ME                                       ME
+lsWts           std|expo|user                                      std
+power           <real-value>                                       0
+pexp            <real-value>                                       0
+pInvar          <real-value>                                       0
+rates           equal|gamma                                        equal
+shape           <real-value>                                       0.5
+removeFreq      proportional|equal                                 proportional
+estFreq         all|constant                                       all
+allSitesMean    no|yes                                             yes
+subst           all|tv|ti|tratio                                   all
+recSeqLen       <integer-value>                                    6
+class           (<cAC><cAG><cAT><cCG><cCT><cGT>)                   (a a a a a a)
+baseFreq        equal|empirical                                    empirical
+missDist        infer|ignore                                       infer
+negBrLen        prohibit|allow|setZero|setAbsVal                   setZero
+undefMult       <real-value>                                       2
+dCollapse       no|yes                                             no
+psdk            1|nbranches                                        nbranches
+psdAddK         <integer-value>                                    0
+precision       <integer-value>                                    5
+                                                 *Option is nonpersistent
+
+paup> nj treefile=nj_p.tre
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = HKY85
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/--------------------------------------- Platypus
+|
+|         /------------------------------------------- Echidna
+|         |
+|         |                                  /------------------------------------------------------- Opossum
+|         |                                 /+
+|         |                                 |\------------------------------------------------ Bandicoot
+|         |                          /------+
+|         |                          |      \-------------------------------------------------- Wallaby
+|         |                          |
+|         |                          |                /--------------------------------------------------------------------- Elephant
+\---------+                          |          /-----+
+          |                          |          |     \----------------------------------------------------------------- Sloth
+          |                          |       /--+
+          |                          |       |  \-------------------------------------------------- Armadillo
+          |                          |       |
+          |                          |       |   /-------------------------------------------------- Aardvark
+          |                          |     /-+/--+
+          |                          |     | ||  \------------------------------------------------------------- Tree shrew
+          \--------------------------+     | ||
+                                     |     | ||     /--------------------------------------------------------------------- Human
+                                     |     | ||  /--+
+                                     |     | \+  |  \------------------------------------------------ Cat
+                                     |     |  | /+
+                                     |     |  | |\--------------------------------------------------------- Rabbit
+                                     |     |  | |
+                                     |    /+  \-+     /------------------------------------------------- Flying fox
+                                     |    ||    |     |
+                                     |    ||    |/----+    /--------------------------------------- Pig
+                                     |    ||    ||    \----+
+                                     |    ||    \+         \--------------------------------------------------- Whale
+                                     |    ||     |
+                                     \----+|     \------------------------------------------------------ Dog
+                                          ||
+                                          ||     /------------------------------------------------------------------- Tenrec
+                                          |\-----+
+                                          |      \---------------------------------------------------------------------------- Hedgehog
+                                          |
+                                          \--------------------------------------------------- Mouse
+
+Neighbor-joining tree written to treefile: ~/eeob563/eeob563-labs/lab3/nj_p.tre
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> dset objective=me dist=p
+
+paup> hsearch
+
+Heuristic search settings:
+  Optimality criterion = distance (minimum evolution)
+    Negative branch lengths allowed, but set to zero for tree-score calculation
+    Distance measure = uncorrected ("p")
+    1149 characters are included
+  Starting tree(s) obtained via neighbor-joining
+  Branch-swapping algorithm: tree-bisection-reconnection (TBR) with reconnection limit = 8
+    Steepest descent option not in effect
+  Initial 'Maxtrees' setting = 100
+  Zero-length branches not collapsed
+  'MulTrees' option in effect
+  No topological constraints in effect
+  Trees are unrooted
+
+Heuristic search completed
+  Total number of rearrangements tried = 4105
+  Score of best tree(s) found = 2.32596
+  Number of trees retained = 1
+  Time used = 0.04 sec (CPU time = 0.04 sec)
+
+paup> showtree
+
+Note: No outgroup has been defined; tree is (arbitrarily) rooted at first taxon.
+
+Tree 1 (rooted using default outgroup)
+
+/----------------------------------------------------------------------------------------------------------------------------- Platypus
+|
+|          /------------------------------------------------------------------------------------------------------------------ Echidna
+|          |
+|          |                                                                                                      /----------- Opossum
+|          |                                                                                          /-----------+
+|          |                                                                                          |           \----------- Bandicoot
+|          |           /------------------------------------------------------------------------------+
+|          |           |                                                                              \----------------------- Wallaby
+|          |           |
+|          |           |                                                                              /----------------------- Elephant
+\----------+           |                                                                              |
+           |           |                                            /---------------------------------+           /----------- Sloth
+           |           |                                            |                                 \-----------+
+           |           |                                            |                                             \----------- Armadillo
+           |           |                                            |
+           |           |                                 /----------+                                             /----------- Human
+           |           |                                 |          |           /---------------------------------+
+           |           |                                 |          |           |                                 \----------- Cat
+           |           |                                 |          |           |
+           \-----------+                                 |          \-----------+                                 /----------- Tree shrew
+                       |                                 |                      |          /----------------------+
+                       |                                 |                      |          |                      \----------- Dog
+                       |                     /-----------+                      \----------+
+                       |                     |           |                                 |          /----------------------- Flying fox
+                       |                     |           |                                 |          |
+                       |                     |           |                                 \----------+           /----------- Pig
+                       |                     |           |                                            \-----------+
+                       |                     |           |                                                        \----------- Whale
+                       |          /----------+           |
+                       |          |          |           |                                                        /----------- Aardvark
+                       |          |          |           \--------------------------------------------------------+
+                       |          |          |                                                                    \----------- Rabbit
+                       |          |          |
+                       \----------+          |                                                                    /----------- Tenrec
+                                  |          \--------------------------------------------------------------------+
+                                  |                                                                               \----------- Hedgehog
+                                  |
+                                  \------------------------------------------------------------------------------------------- Mouse
+
+paup> nj treefile=nj_p.tre
+
+OK to replace file "nj_p.tre"? (Y/n)y
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = uncorrected ("p")
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/----------------------------------------- Platypus
+|
+|         /------------------------------------------------ Echidna
+|         |
+|         |                               /---------------------------------------------------------- Opossum
+|         |                              /+
+|         |                              |\----------------------------------------------------- Bandicoot
+|         |                       /------+
+|         |                       |      \------------------------------------------------------ Wallaby
+|         |                       |
+|         |                       |           /-------------------------------------------------------------------------- Elephant
+\---------+                       |           |
+          |                       |         /-+  /--------------------------------------------------------------------- Tenrec
+          |                       |         | \--+
+          |                       |        /+    \---------------------------------------------------------------------------- Hedgehog
+          |                       |        ||
+          |                       |        ||    /------------------------------------------------------------------- Sloth
+          |                       |        |\----+
+          |                       |       /+     \---------------------------------------------------- Armadillo
+          |                       |       ||
+          \-----------------------+       || /------------------------------------------------------ Aardvark
+                                  |       |\-+
+                                  |       |  \----------------------------------------------------------- Rabbit
+                                  |     /-+
+                                  |     | |   /----------------------------------------------------------------------- Human
+                                  |     | |/--+
+                                  |     | ||  \----------------------------------------------------- Cat
+                                  |     | ||
+                                  |     | \+    /----------------------------------------------------- Flying fox
+                                  |     |  |    |
+                                  |   /-+  |/---+    /-------------------------------------------- Pig
+                                  |   | |  ||   \----+
+                                  |   | |  \+        \------------------------------------------------------ Whale
+                                  |   | |   |
+                                  \---+ |   \---------------------------------------------------------- Dog
+                                      | |
+                                      | \---------------------------------------------------------------- Tree shrew
+                                      |
+                                      \-------------------------------------------------------- Mouse
+
+Neighbor-joining tree written to treefile: ~/eeob563/eeob563-labs/lab3/nj_p.tre
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> dset objective=me dist=JC
+
+paup> nj treefile=nj_jc.tre
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = Jukes-Cantor
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/-------------------------------------- Platypus
+|
+|         /------------------------------------------- Echidna
+|         |
+|         |                                   /------------------------------------------------------- Opossum
+|         |                                  /+
+|         |                                  |\------------------------------------------------- Bandicoot
+|         |                           /------+
+|         |                           |      \--------------------------------------------------- Wallaby
+|         |                           |
+|         |                           |               /---------------------------------------------------------------------- Elephant
+\---------+                           |          /----+
+          |                           |          |    \----------------------------------------------------------------- Sloth
+          |                           |       /--+
+          |                           |       |  \--------------------------------------------------- Armadillo
+          |                           |       |
+          |                           |       |  /---------------------------------------------------- Aardvark
+          |                           |     /-+/-+
+          |                           |     | || \--------------------------------------------------------- Rabbit
+          \---------------------------+     | ||
+                                      |     | ||     /--------------------------------------------------------------------- Human
+                                      |     | \+/----+
+                                      |     |  ||    \------------------------------------------------ Cat
+                                      |     |  ||
+                                      |     |  \+ /--------------------------------------------------------------- Tree shrew
+                                      |     |   |/+
+                                      |   /-+   ||\------------------------------------------------------ Dog
+                                      |   | |   \+
+                                      |   | |    |    /-------------------------------------------------- Flying fox
+                                      |   | |    |    |
+                                      |   | |    \----+     /--------------------------------------- Pig
+                                      |   | |         \-----+
+                                      \---+ |               \--------------------------------------------------- Whale
+                                          | |
+                                          | |    /------------------------------------------------------------------- Tenrec
+                                          | \----+
+                                          |      \---------------------------------------------------------------------------- Hedgehog
+                                          |
+                                          \---------------------------------------------------- Mouse
+
+Neighbor-joining tree written to treefile: ~/eeob563/eeob563-labs/lab3/nj_jc.tre
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> dset objective=me dist=K2d
+
+Error(#141): Invalid value specified for 'distance': "K2d".
+                 Use "distance=?" to see a list of valid values for each option.
+
+paup> dset objective=me dist=K2D
+
+Error(#141): Invalid value specified for 'distance': "K2D".
+                 Use "distance=?" to see a list of valid values for each option.
+
+paup> dset objective=me dist=K2P
+
+paup> nj treefile=nj_k2p.tre
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = Kimura 2-parameter
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/--------------------------------------- Platypus
+|
+|         /-------------------------------------------- Echidna
+|         |
+|         |                                  /------------------------------------------------------- Opossum
+|         |                                 /+
+|         |                                 |\------------------------------------------------- Bandicoot
+|         |                          /------+
+|         |                          |      \--------------------------------------------------- Wallaby
+|         |                          |
+|         |                          |                /--------------------------------------------------------------------- Elephant
+\---------+                          |          /-----+
+          |                          |          |     \----------------------------------------------------------------- Sloth
+          |                          |        /-+
+          |                          |        | \--------------------------------------------------- Armadillo
+          |                          |        |
+          |                          |        |  /--------------------------------------------------- Aardvark
+          |                          |      /-+/-+
+          |                          |      | || \------------------------------------------------------------- Tree shrew
+          \--------------------------+      | ||
+                                     |      | ||    /--------------------------------------------------------------------- Human
+                                     |      | || /--+
+                                     |      | \+ |  \------------------------------------------------- Cat
+                                     |      |  |/+
+                                     |      |  ||\--------------------------------------------------------- Rabbit
+                                     |      |  ||
+                                     |    /-+  \+     /-------------------------------------------------- Flying fox
+                                     |    | |   |     |
+                                     |    | |   |/----+     /--------------------------------------- Pig
+                                     |    | |   ||    \-----+
+                                     |    | |   \+          \-------------------------------------------------- Whale
+                                     |    | |    |
+                                     \----+ |    \------------------------------------------------------- Dog
+                                          | |
+                                          | |    /------------------------------------------------------------------- Tenrec
+                                          | \----+
+                                          |      \---------------------------------------------------------------------------- Hedgehog
+                                          |
+                                          \--------------------------------------------------- Mouse
+
+Neighbor-joining tree written to treefile: ~/eeob563/eeob563-labs/lab3/nj_k2p.tre
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> dset objective=me dist=HKY85
+
+paup> nj treefile=nj_hky85.tre
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = HKY85
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/--------------------------------------- Platypus
+|
+|         /------------------------------------------- Echidna
+|         |
+|         |                                  /------------------------------------------------------- Opossum
+|         |                                 /+
+|         |                                 |\------------------------------------------------ Bandicoot
+|         |                          /------+
+|         |                          |      \-------------------------------------------------- Wallaby
+|         |                          |
+|         |                          |                /--------------------------------------------------------------------- Elephant
+\---------+                          |          /-----+
+          |                          |          |     \----------------------------------------------------------------- Sloth
+          |                          |       /--+
+          |                          |       |  \-------------------------------------------------- Armadillo
+          |                          |       |
+          |                          |       |   /-------------------------------------------------- Aardvark
+          |                          |     /-+/--+
+          |                          |     | ||  \------------------------------------------------------------- Tree shrew
+          \--------------------------+     | ||
+                                     |     | ||     /--------------------------------------------------------------------- Human
+                                     |     | ||  /--+
+                                     |     | \+  |  \------------------------------------------------ Cat
+                                     |     |  | /+
+                                     |     |  | |\--------------------------------------------------------- Rabbit
+                                     |     |  | |
+                                     |    /+  \-+     /------------------------------------------------- Flying fox
+                                     |    ||    |     |
+                                     |    ||    |/----+    /--------------------------------------- Pig
+                                     |    ||    ||    \----+
+                                     |    ||    \+         \--------------------------------------------------- Whale
+                                     |    ||     |
+                                     \----+|     \------------------------------------------------------ Dog
+                                          ||
+                                          ||     /------------------------------------------------------------------- Tenrec
+                                          |\-----+
+                                          |      \---------------------------------------------------------------------------- Hedgehog
+                                          |
+                                          \--------------------------------------------------- Mouse
+
+Neighbor-joining tree written to treefile: ~/eeob563/eeob563-labs/lab3/nj_hky85.tre
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> dset objective=me dist=GTR
+
+paup> nj treefile=nj_gtr.tre
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = general time-reversible
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/------------------------------------ Platypus
+|
+|        /----------------------------------------- Echidna
+|        |
+|        |                                 /---------------------------------------------------- Opossum
+|        |                                /+
+|        |                                |\--------------------------------------------- Bandicoot
+|        |                         /------+
+|        |                         |      \---------------------------------------------- Wallaby
+|        |                         |
+|        |                         |                 /------------------------------------------------------------------ Elephant
+\--------+                         |           /-----+
+         |                         |           |     \------------------------------------------------------------- Sloth
+         |                         |           |
+         |                         |         /-+     /-------------------------------------------------------------- Tenrec
+         |                         |         | | /---+
+         |                         |         | | |   \------------------------------------------------------------------------ Hedgehog
+         |                         |        /+ \-+
+         |                         |        ||   \---------------------------------------------- Armadillo
+         |                         |        ||
+         \-------------------------+        || /----------------------------------------------- Aardvark
+                                   |        |\-+
+                                   |        |  \---------------------------------------------------- Rabbit
+                                   |      /-+
+                                   |      | |     /---------------------------------------------------------------- Human
+                                   |      | |/----+
+                                   |      | ||    \-------------------------------------------- Cat
+                                   |      | ||
+                                   |      | \+    /---------------------------------------------- Flying fox
+                                   |   /--+  |    |
+                                   |   |  |  |/---+    /------------------------------------ Pig
+                                   |   |  |  ||   \----+
+                                   |   |  |  \+        \----------------------------------------------- Whale
+                                   |   |  |   |
+                                   \---+  |   \--------------------------------------------------- Dog
+                                       |  |
+                                       |  \-------------------------------------------------------- Tree shrew
+                                       |
+                                       \------------------------------------------------- Mouse
+
+Neighbor-joining tree written to treefile: ~/eeob563/eeob563-labs/lab3/nj_gtr.tre
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> dset objective=me dist=K2p
+
+paup> nj treefile=nj_k2p.tre
+
+OK to replace file "nj_k2p.tre"? (Y/n)y
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = Kimura 2-parameter
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/--------------------------------------- Platypus
+|
+|         /-------------------------------------------- Echidna
+|         |
+|         |                                  /------------------------------------------------------- Opossum
+|         |                                 /+
+|         |                                 |\------------------------------------------------- Bandicoot
+|         |                          /------+
+|         |                          |      \--------------------------------------------------- Wallaby
+|         |                          |
+|         |                          |                /--------------------------------------------------------------------- Elephant
+\---------+                          |          /-----+
+          |                          |          |     \----------------------------------------------------------------- Sloth
+          |                          |        /-+
+          |                          |        | \--------------------------------------------------- Armadillo
+          |                          |        |
+          |                          |        |  /--------------------------------------------------- Aardvark
+          |                          |      /-+/-+
+          |                          |      | || \------------------------------------------------------------- Tree shrew
+          \--------------------------+      | ||
+                                     |      | ||    /--------------------------------------------------------------------- Human
+                                     |      | || /--+
+                                     |      | \+ |  \------------------------------------------------- Cat
+                                     |      |  |/+
+                                     |      |  ||\--------------------------------------------------------- Rabbit
+                                     |      |  ||
+                                     |    /-+  \+     /-------------------------------------------------- Flying fox
+                                     |    | |   |     |
+                                     |    | |   |/----+     /--------------------------------------- Pig
+                                     |    | |   ||    \-----+
+                                     |    | |   \+          \-------------------------------------------------- Whale
+                                     |    | |    |
+                                     \----+ |    \------------------------------------------------------- Dog
+                                          | |
+                                          | |    /------------------------------------------------------------------- Tenrec
+                                          | \----+
+                                          |      \---------------------------------------------------------------------------- Hedgehog
+                                          |
+                                          \--------------------------------------------------- Mouse
+
+Neighbor-joining tree written to treefile: ~/eeob563/eeob563-labs/lab3/nj_k2p.tre
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> dset objective=me dist=hky85
+
+paup> nj treefile=nj_hky85.tre
+
+OK to replace file "nj_hky85.tre"? (Y/n)y
+
+Neighbor-joining search settings:
+  Ties (if encountered) will be broken systematically
+  Distance measure = HKY85
+  1149 characters are included
+  (Tree is unrooted)
+
+Neighbor-joining tree:
+
+/--------------------------------------- Platypus
+|
+|         /------------------------------------------- Echidna
+|         |
+|         |                                  /------------------------------------------------------- Opossum
+|         |                                 /+
+|         |                                 |\------------------------------------------------ Bandicoot
+|         |                          /------+
+|         |                          |      \-------------------------------------------------- Wallaby
+|         |                          |
+|         |                          |                /--------------------------------------------------------------------- Elephant
+\---------+                          |          /-----+
+          |                          |          |     \----------------------------------------------------------------- Sloth
+          |                          |       /--+
+          |                          |       |  \-------------------------------------------------- Armadillo
+          |                          |       |
+          |                          |       |   /-------------------------------------------------- Aardvark
+          |                          |     /-+/--+
+          |                          |     | ||  \------------------------------------------------------------- Tree shrew
+          \--------------------------+     | ||
+                                     |     | ||     /--------------------------------------------------------------------- Human
+                                     |     | ||  /--+
+                                     |     | \+  |  \------------------------------------------------ Cat
+                                     |     |  | /+
+                                     |     |  | |\--------------------------------------------------------- Rabbit
+                                     |     |  | |
+                                     |    /+  \-+     /------------------------------------------------- Flying fox
+                                     |    ||    |     |
+                                     |    ||    |/----+    /--------------------------------------- Pig
+                                     |    ||    ||    \----+
+                                     |    ||    \+         \--------------------------------------------------- Whale
+                                     |    ||     |
+                                     \----+|     \------------------------------------------------------ Dog
+                                          ||
+                                          ||     /------------------------------------------------------------------- Tenrec
+                                          |\-----+
+                                          |      \---------------------------------------------------------------------------- Hedgehog
+                                          |
+                                          \--------------------------------------------------- Mouse
+
+Neighbor-joining tree written to treefile: ~/eeob563/eeob563-labs/lab3/nj_hky85.tre
+
+Tree found by neighbor-joining method stored in tree buffer
+Time used for tree calculation = 0.00 sec (CPU time = 0.00 sec)
+
+paup> phylip
+
+Error(#152): Command "phylip" is unrecognized.
+                 If it is spelled correctly, look for problems in a previous command, such as an unintentional semicolon.
+
+paup> module load phylip
+
+Error(#152): Command "module" is unrecognized.
+                 If it is spelled correctly, look for problems in a previous command, such as an unintentional semicolon.
+
+paup> quit

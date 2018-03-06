@@ -1,0 +1,126 @@
+
+
+This is RAxML version 8.2.9 released by Alexandros Stamatakis on July 20 2016.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Sarah Lutteropp   (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+Charlie Taylor    (UF)
+
+
+Alignment has 204 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 0.64%
+
+RAxML rapid hill-climbing mode
+
+Using 1 distinct models/data partitions with joint branch length optimization
+
+
+Executing 20 inferences on the original alignment using 20 distinct randomized MP trees
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 0.1000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 204
+Name: No Name Provided
+DataType: AA
+Substitution Matrix: WAG
+Using fixed base frequencies
+
+
+
+
+RAxML was called as follows:
+
+raxmlHPC-PTHREADS-SSE3 -T2 -m PROTGAMMAWAG -p 12345 -s cobaa.aln -# 20 -n T2 
+
+
+Partition: 0 with name: No Name Provided
+Base frequencies: 0.087 0.044 0.039 0.057 0.019 0.037 0.058 0.083 0.024 0.048 0.086 0.062 0.020 0.038 0.046 0.070 0.061 0.014 0.035 0.071 
+
+Inference[0]: Time 20.519055 GAMMA-based likelihood -4889.501187, best rearrangement setting 10
+alpha[0]: 0.326297 
+Inference[1]: Time 14.725281 GAMMA-based likelihood -4883.492537, best rearrangement setting 10
+alpha[0]: 0.320107 
+Inference[2]: Time 13.959815 GAMMA-based likelihood -4883.492394, best rearrangement setting 5
+alpha[0]: 0.319722 
+Inference[3]: Time 20.124088 GAMMA-based likelihood -4884.063658, best rearrangement setting 10
+alpha[0]: 0.328074 
+Inference[4]: Time 22.929141 GAMMA-based likelihood -4883.492389, best rearrangement setting 10
+alpha[0]: 0.319690 
+Inference[5]: Time 20.175105 GAMMA-based likelihood -4885.712544, best rearrangement setting 5
+alpha[0]: 0.321976 
+Inference[6]: Time 18.823966 GAMMA-based likelihood -4889.903683, best rearrangement setting 5
+alpha[0]: 0.321374 
+Inference[7]: Time 9.995623 GAMMA-based likelihood -4883.492406, best rearrangement setting 5
+alpha[0]: 0.319785 
+Inference[8]: Time 28.866987 GAMMA-based likelihood -4884.063252, best rearrangement setting 10
+alpha[0]: 0.328551 
+Inference[9]: Time 14.407272 GAMMA-based likelihood -4885.692336, best rearrangement setting 5
+alpha[0]: 0.317153 
+Inference[10]: Time 13.811060 GAMMA-based likelihood -4885.691538, best rearrangement setting 5
+alpha[0]: 0.316386 
+Inference[11]: Time 14.573201 GAMMA-based likelihood -4889.903773, best rearrangement setting 5
+alpha[0]: 0.322101 
+Inference[12]: Time 25.922206 GAMMA-based likelihood -4886.173003, best rearrangement setting 5
+alpha[0]: 0.336656 
+Inference[13]: Time 20.131126 GAMMA-based likelihood -4884.063445, best rearrangement setting 10
+alpha[0]: 0.328290 
+Inference[14]: Time 20.129572 GAMMA-based likelihood -4886.806662, best rearrangement setting 10
+alpha[0]: 0.338326 
+Inference[15]: Time 28.738269 GAMMA-based likelihood -4884.063913, best rearrangement setting 10
+alpha[0]: 0.327862 
+Inference[16]: Time 13.744793 GAMMA-based likelihood -4885.691538, best rearrangement setting 5
+alpha[0]: 0.316386 
+Inference[17]: Time 24.333991 GAMMA-based likelihood -4884.063366, best rearrangement setting 10
+alpha[0]: 0.328386 
+Inference[18]: Time 25.221531 GAMMA-based likelihood -4884.063314, best rearrangement setting 10
+alpha[0]: 0.328457 
+Inference[19]: Time 28.442900 GAMMA-based likelihood -4884.097126, best rearrangement setting 5
+alpha[0]: 0.321042 
+
+
+Conducting final model optimizations on all 20 trees under GAMMA-based models ....
+
+Inference[0] final GAMMA-based Likelihood: -4889.522422 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.0
+Inference[1] final GAMMA-based Likelihood: -4883.492403 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.1
+Inference[2] final GAMMA-based Likelihood: -4883.492403 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.2
+Inference[3] final GAMMA-based Likelihood: -4884.108798 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.3
+Inference[4] final GAMMA-based Likelihood: -4883.492404 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.4
+Inference[5] final GAMMA-based Likelihood: -4885.700093 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.5
+Inference[6] final GAMMA-based Likelihood: -4889.905669 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.6
+Inference[7] final GAMMA-based Likelihood: -4883.492403 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.7
+Inference[8] final GAMMA-based Likelihood: -4884.108798 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.8
+Inference[9] final GAMMA-based Likelihood: -4885.700093 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.9
+Inference[10] final GAMMA-based Likelihood: -4885.700093 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.10
+Inference[11] final GAMMA-based Likelihood: -4889.905669 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.11
+Inference[12] final GAMMA-based Likelihood: -4886.361792 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.12
+Inference[13] final GAMMA-based Likelihood: -4884.108798 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.13
+Inference[14] final GAMMA-based Likelihood: -4887.020452 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.14
+Inference[15] final GAMMA-based Likelihood: -4884.108798 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.15
+Inference[16] final GAMMA-based Likelihood: -4885.700093 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.16
+Inference[17] final GAMMA-based Likelihood: -4884.108798 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.17
+Inference[18] final GAMMA-based Likelihood: -4884.108798 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.18
+Inference[19] final GAMMA-based Likelihood: -4884.108798 tree written to file /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_result.T2.RUN.19
+
+
+Starting final GAMMA-based thorough Optimization on tree 7 likelihood -4883.492403 .... 
+
+Final GAMMA-based Score of best tree -4883.492403
+
+Program execution info written to /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_info.T2
+Best-scoring ML tree written to: /home/bbista/eeob563/eeob563-labs/lab4/assign5/RAxML_bestTree.T2
+
+Overall execution time: 404.891517 secs or 0.112470 hours or 0.004686 days
+

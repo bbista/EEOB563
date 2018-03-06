@@ -1,0 +1,39 @@
+
+   Module name: openmpi                    Version: 3.0.0               
+
+       Contact: researchit@iastate.edu
+      Homepage: http://www.open-mpi.org/                                
+      Download: http://www.open-mpi.org/software/                       
+          Help: Documentation is available online at http://www.open-mpi.org or as a set of UNIX man pages.
+         Notes: The Open MPI Project is an open source Message Passing Interface implementation that is developed and maintained by a consortium of academic, research, and industry partners. Open MPI is therefore able to combine the expertise, technologies, and resources from all across the High Performance Computing community in order to build the best MPI library available.
+
+
+   Module name: raxml                      Version: 8.2.9               
+
+       Contact: researchit@iastate.edu
+      Homepage: http://sco.h-its.org/exelixis/web/software/raxml/index.html
+      Download: https://github.com/stamatak/standard-RAxML              
+          Help: Documentation can be found online at http://sco.h-its.org/exelixis/web/software/raxml/index.html#documentation.
+         Notes: RAxML (Randomized Axelerated Maximum Likelihood) is a program for sequential and parallel Maximum Likelihood based inference of large phylogenetic trees. It can also be used for post-analysis of sets of phylogenetic trees, analysis of alignments and, evolutionary placement of short reads. This module contains the mpi executables along with the pthread executables. They are named accordingly.
+
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[14652,1],12]
+  Exit code:    255
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[14849,1],4]
+  Exit code:    1
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[15122,1],14]
+  Exit code:    255
+--------------------------------------------------------------------------

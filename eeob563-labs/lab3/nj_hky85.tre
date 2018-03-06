@@ -1,0 +1,10 @@
+#NEXUS 
+
+Begin trees;  [Treefile saved Thu Feb  8 09:58:56 2018]
+[!>Neighbor-joining search settings:
+>  Ties (if encountered) will be broken systematically
+>  Distance measure = HKY85
+>  (Tree is unrooted)
+]
+tree nj = [&U] (Platypus:0.09320062,(Echidna:0.10545906,(((Opossum:0.13289448,Bandicoot:0.11656415):0.00202068,Wallaby:0.12015604):0.01724181,(((((Elephant:0.16800788,Sloth:0.15669673):0.01337992,Armadillo:0.12139236):0.00705978,((Aardvark:0.12191922,Tree_shrew:0.14728150):0.00549760,(((Human:0.16606466,Cat:0.11513205):0.00800720,Rabbit:0.13681250):0.00301158,((Flying_fox:0.11875374,(Pig:0.09409342,Whale:0.12132324):0.01294173):0.01307090,Dog:0.13148037):0.00205987):0.00344940):0.00264555):0.00442685,(Tenrec:0.16135461,Hedgehog:0.18410661):0.01304916):0.00465454,Mouse:0.12392107):0.01053945):0.06650860):0.02330015);
+end;
