@@ -1,0 +1,106 @@
+   Logging screen output to file "conifer-partn-log.txt"
+
+MrBayes > 
+   Executing file "hiv.nxs"
+   DOS line termination
+   Longest line length = 672
+   Parsing file
+   Expecting NEXUS formatted file
+   Reading data block
+      Allocated taxon set
+      Allocated matrix
+      Defining new matrix with 11 taxa and 660 characters
+      Data is Dna
+      Missing data coded as -
+      Taxon  1 -> HIVRF
+      Taxon  2 -> L1
+      Taxon  3 -> L2
+      Taxon  4 -> L3
+      Taxon  5 -> L4
+      Taxon  6 -> A1
+      Taxon  7 -> B1
+      Taxon  8 -> B2
+      Taxon  9 -> A2
+      Taxon 10 -> A3
+      Taxon 11 -> L5
+      Successfully read matrix
+      Setting default partition (does not divide up characters)
+      Setting model defaults
+      Seed (for generating default start values) = 1521992817
+      Setting output file names to "hiv.nxs.run<i>.<p|t>"
+   Exiting data block
+   Reached end of file
+
+MrBayes > 
+   Setting Nst to 6
+   Setting Rates to Gamma
+   Successfully set likelihood model parameters
+
+MrBayes > 
+   Setting Shapepr to Exponential(0.05)
+   Successfully set prior model parameters
+
+MrBayes > 
+   Model settings:
+
+      Data not partitioned --
+         Datatype  = DNA
+         Nucmodel  = 4by4
+         Nst       = 6
+                     Substitution rates, expressed as proportions
+                     of the rate sum, have a Dirichlet prior
+                     (1.00,1.00,1.00,1.00,1.00,1.00)
+         Covarion  = No
+         # States  = 4
+                     State frequencies have a Dirichlet prior
+                     (1.00,1.00,1.00,1.00)
+         Rates     = Gamma
+                     The distribution is approximated using 4 categories.
+                     Likelihood summarized over all rate categories in each generation.
+                     Shape parameter is exponentially
+                     distributed with parameter (0.05).
+
+   Active parameters: 
+
+      Parameters
+      ---------------------
+      Revmat              1
+      Statefreq           2
+      Shape               3
+      Ratemultiplier      4
+      Topology            5
+      Brlens              6
+      ---------------------
+
+      1 --  Parameter  = Revmat
+            Type       = Rates of reversible rate matrix
+            Prior      = Dirichlet(1.00,1.00,1.00,1.00,1.00,1.00)
+
+      2 --  Parameter  = Pi
+            Type       = Stationary state frequencies
+            Prior      = Dirichlet
+
+      3 --  Parameter  = Alpha
+            Type       = Shape of scaled gamma distribution of site rates
+            Prior      = Exponential(0.05)
+
+      4 --  Parameter  = Ratemultiplier
+            Type       = Partition-specific rate multiplier
+            Prior      = Fixed(1.0)
+
+      5 --  Parameter  = Tau
+            Type       = Topology
+            Prior      = All topologies equally probable a priori
+            Subparam.  = V
+
+      6 --  Parameter  = V
+            Type       = Branch lengths
+            Prior      = Unconstrained:GammaDir(1.0,0.1000,1.0,1.0)
+
+
+MrBayes > 
+   Setting outgroup to taxon "HIVRF"
+
+MrBayes > 
+   Deleting previously defined characters
+   Deleting previously defined taxa

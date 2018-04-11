@@ -1,0 +1,70 @@
+   Logging screen output to file "test.log"
+
+MrBayes > 
+   Executing file "hiv.nxs"
+   DOS line termination
+   Longest line length = 672
+   Parsing file
+   Expecting NEXUS formatted file
+   Reading data block
+      Allocated taxon set
+      Allocated matrix
+      Defining new matrix with 11 taxa and 660 characters
+      Data is Dna
+      Missing data coded as -
+      Taxon  1 -> HIVRF
+      Taxon  2 -> L1
+      Taxon  3 -> L2
+      Taxon  4 -> L3
+      Taxon  5 -> L4
+      Taxon  6 -> A1
+      Taxon  7 -> B1
+      Taxon  8 -> B2
+      Taxon  9 -> A2
+      Taxon 10 -> A3
+      Taxon 11 -> L5
+      Successfully read matrix
+      Setting default partition (does not divide up characters)
+      Setting model defaults
+      Seed (for generating default start values) = 1522002126
+      Setting output file names to "hiv.nxs.run<i>.<p|t>"
+   Exiting data block
+   Reached end of file
+
+MrBayes > 
+   Setting Nst to 6
+   Setting Rates to Invgamma
+   Successfully set likelihood model parameters
+
+MrBayes > 
+   Unknown character "" (ASCII code 8)
+   Unknown character in command string
+
+MrBayes > 
+   Unknown character "" (ASCII code 8)
+   Unknown character in command string
+
+MrBayes > 
+   Unknown character "" (ASCII code 27)
+   Unknown character in command string
+
+MrBayes > 
+   Defining constraint called 'hiv'
+   Could not find a taxset called 'ax'
+
+MrBayes > 
+   Unknown character "" (ASCII code 27)
+   Unknown character in command string
+
+MrBayes > 
+   Defining constraint called 'hiv-'
+   Expecting  = or - or <name> or <number>
+
+MrBayes > 
+   Defining constraint called 'hiv'
+
+MrBayes > 
+   Unknown character "" (ASCII code 27)
+   Unknown character in command string
+
+MrBayes > 
